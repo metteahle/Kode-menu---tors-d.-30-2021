@@ -1,0 +1,81 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Source+Sans+Pro:wght@200&display=swap');
+
+/* font-family: 'Oswald', sans-serif; (TYK til overskrifter)*/
+/* font-family: 'Source Sans Pro', sans-serif; (Tynd til brødtekst) */
+
+/* Variabler: genbruges og gør designvalg enkle */
+:root {
+  /* farver */
+  --green: #bdc486;
+  --lyspink: #eae1df;
+  --beige: #f1e8cf;
+  --grey: #afa5a3;
+  --pink: #b27d83;
+  --lysgrey: #eaece5;
+  --sort:#000000;
+  --hvid:#ffffff;
+
+  /* fonte */
+  --brod: 'Source Sans Pro', sans-serif; /* brødtekst */
+  --overskrift: 'Oswald', sans-serif /* overskrifter */
+
+/* med et undermenu-niveau */
+.submenu { display: none; }
+.menu>li:hover>.submenu { display: block; }
+
+/*
+Hvis der er behov for flere niveauer, så prøv:
+
+.menu li>ul { display: none; }
+.menu li:hover>ul { display: block; }
+*/
+
+/* responsive regler */
+@media screen and (max-width: 401px) {
+  body {
+    background-color: #edc8a1;
+    color: #fff;
+    font-size: 200%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    background-color: #ebeda1;
+    color: #fff;
+    font-size: 110%;
+  }
+}
+/* @uri: https://www.w3schools.com/css/css3_mediaqueries.asp */
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-right: 60px;
+  background-color: #DEB887;
+}
+
+.submenu {
+    list-style-type: none;
+}
+
+.burger {
+  position: absolute;
+  left: -370px;
+  z-index: 1;
+  width: 400px;
+  background-color: #DEB887;
+  color: #fff;
+}
+
+#showmenu {
+  float: right;
+  padding: 5px 7px;
+}
+
+.burger:hover {
+  left: 0px;
+}
